@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom'
 import { MagnifyingGlass } from '@phosphor-icons/react'
 
 export function PageHeader() {
+  const platform = navigator?.userAgentData?.platform ?? navigator?.platform
+
   return (
     <div className="flex h-16 border-b border-zinc-200 items-center justify-between">
       <Link className="flex items-center font-semibold w-64 h-16 p-4" to="/">
         Orbit
       </Link>
 
-      <div>
+      <div className="hidden md:flex">
         <button
           type="button"
           className="flex gap-4 items-center h-10 pl-4 pr-2 rounded-lg border border-zinc-100 text-zinc-400 hover:bg-zinc-100 transition-colors w-[440px] justify-between"
@@ -21,12 +23,12 @@ export function PageHeader() {
           </div>
 
           <span className="text-xs border border-zinc-200 py-1 px-2 rounded-md leading-none">
-            ⌘ K
+            {platform === 'macOS' ? '⌘' : 'Ctrl'} K
           </span>
         </button>
       </div>
 
-      <div className="w-64" />
+      <div className="w-64 hidden md:flex" />
     </div>
   )
 }
