@@ -5,16 +5,16 @@ import { Badge } from './Badge'
 
 export function Sidebar() {
   return (
-    <div className="flex-col p-4 w-64 border-r border-zinc-200 hidden xl:flex">
+    <div className="flex-col p-4 w-64 gap-6 border-r border-zinc-200 hidden xl:flex">
       {resources.map((resource) => (
         <div key={resource.name} className="flex flex-col gap-2">
-          <span className="text-base font-medium">{resource.name}</span>
+          <span className="text-sm font-medium">{resource.name}</span>
 
           <div className="flex flex-col gap-2">
             {resource.routes.map((route) => (
               <Link
                 key={route.name}
-                className="flex items-center cursor-pointer text-zinc-500 hover:text-zinc-900"
+                className="flex items-center cursor-pointer text-zinc-400 hover:text-zinc-900"
                 to={`/${resource.name
                   .toLowerCase()
                   .replace(' ', '-')}/${route.name

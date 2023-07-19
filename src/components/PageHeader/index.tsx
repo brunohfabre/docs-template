@@ -18,32 +18,34 @@ export function PageHeader() {
             <Search onSelect={() => setOpen(false)} />
           </div>
 
-          {resources.map((resource) => (
-            <div key={resource.name} className="flex flex-col gap-2">
-              <span className="text-base font-medium">{resource.name}</span>
+          <div className="flex flex-col gap-6">
+            {resources.map((resource) => (
+              <div key={resource.name} className="flex flex-col gap-2">
+                <span className="text-base font-medium">{resource.name}</span>
 
-              <div className="flex flex-col gap-2">
-                {resource.routes.map((route) => (
-                  <Link
-                    key={route.name}
-                    className="flex items-center cursor-pointer text-zinc-500 hover:text-zinc-900"
-                    to={`/${resource.name
-                      .toLowerCase()
-                      .replace(' ', '-')}/${route.name
-                      .toLowerCase()
-                      .replace(' ', '-')}`}
-                    onClick={() => setOpen(false)}
-                  >
-                    <div className="w-12 flex">
-                      <Badge method={route.method} />
-                    </div>
+                <div className="flex flex-col gap-2">
+                  {resource.routes.map((route) => (
+                    <Link
+                      key={route.name}
+                      className="flex items-center cursor-pointer text-zinc-400 hover:text-zinc-900"
+                      to={`/${resource.name
+                        .toLowerCase()
+                        .replace(' ', '-')}/${route.name
+                        .toLowerCase()
+                        .replace(' ', '-')}`}
+                      onClick={() => setOpen(false)}
+                    >
+                      <div className="w-12 flex">
+                        <Badge method={route.method} />
+                      </div>
 
-                    <span className="text-sm">{route.name}</span>
-                  </Link>
-                ))}
+                      <span className="text-base">{route.name}</span>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       )}
 

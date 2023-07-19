@@ -1,5 +1,24 @@
 export const resources = [
   {
+    name: 'Tokens',
+    routes: [
+      {
+        name: 'Generate token',
+        route: '/token',
+        method: 'post',
+        headers: [],
+        params: [],
+        body: [
+          {
+            name: 'assertion',
+            type: 'string',
+            required: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: 'Applications',
     routes: [
       {
