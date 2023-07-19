@@ -10,7 +10,11 @@ import { Badge } from '../Badge'
 
 const platform = navigator?.userAgentData?.platform ?? navigator?.platform
 
-export function Search() {
+interface SearchProps {
+  onSelect?: () => void
+}
+
+export function Search({ onSelect }: SearchProps) {
   const navigate = useNavigate()
 
   const [open, setOpen] = useState(false)
@@ -32,6 +36,10 @@ export function Search() {
     navigate(route)
 
     setOpen(false)
+
+    if (onSelect) {
+      onSelect()
+    }
   }
 
   return (

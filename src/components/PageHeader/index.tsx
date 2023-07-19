@@ -15,7 +15,7 @@ export function PageHeader() {
       {open && (
         <div className="fixed top-16 right-0 bottom-0 left-0 p-4 flex flex-col bg-white z-10 lg:hidden">
           <div className="flex pb-4">
-            <Search />
+            <Search onSelect={() => setOpen(false)} />
           </div>
 
           {resources.map((resource) => (
