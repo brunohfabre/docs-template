@@ -51,10 +51,10 @@ export function PageHeader() {
         <Search />
 
         <button
-          className="h-16 w-16 flex items-center justify-center lg:flex"
+          className="h-16 w-16 flex items-center justify-center xl:flex"
           onClick={() => setOpen((prevState) => !prevState)}
         >
-          <List size={20} weight="bold" className="lg:hidden" />
+          <List size={20} weight="bold" className="xl:hidden" />
         </button>
       </div>
     </>

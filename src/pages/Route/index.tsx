@@ -81,7 +81,7 @@ export function Route({ route }: RouteProps) {
         )}
       </main>
 
-      <div className="w-64 hidden xl:block" />
+      <div className="hidden w-64 xl:block" />
     </>
   )
 }
