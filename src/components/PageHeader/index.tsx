@@ -13,7 +13,7 @@ export function PageHeader() {
   return (
     <>
       {open && (
-        <div className="fixed top-16 right-0 bottom-0 left-0 p-4 flex flex-col bg-white z-10 md:hidden">
+        <div className="fixed top-16 right-0 bottom-0 left-0 p-4 flex flex-col bg-white z-10 lg:hidden">
           {resources.map((resource) => (
             <div key={resource.name} className="flex flex-col gap-2">
               <span className="text-base font-medium">{resource.name}</span>
@@ -44,17 +44,17 @@ export function PageHeader() {
       )}
 
       <div className="flex h-16 border-b border-zinc-200 items-center justify-between">
-        <Link className="flex items-center font-semibold w-64 h-16 p-4" to="/">
+        <Link className="flex items-center font-semibold h-16 p-4" to="/">
           Orbit
         </Link>
 
         <Search />
 
         <button
-          className="h-16 w-16 flex items-center justify-center md:flex md:w-64"
+          className="h-16 w-16 flex items-center justify-center lg:flex"
           onClick={() => setOpen((prevState) => !prevState)}
         >
-          <List size={20} weight="bold" className="md:hidden" />
+          <List size={20} weight="bold" className="lg:hidden" />
         </button>
       </div>
     </>
