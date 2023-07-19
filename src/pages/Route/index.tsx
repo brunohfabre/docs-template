@@ -29,7 +29,7 @@ export function Route({ route }: RouteProps) {
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
             <h1 className="text-xl font-medium">{route.name}</h1>
-            <Badge method={route.method} />
+            <Badge method={route.method} size="md" />
           </div>
 
           {route.description && (
