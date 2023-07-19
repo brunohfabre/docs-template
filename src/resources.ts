@@ -4,6 +4,7 @@ export const resources = [
     routes: [
       {
         name: 'Generate token',
+        description: '',
         route: '/token',
         method: 'post',
         headers: [],
