@@ -1,3 +1,4 @@
+import { Badge } from '../../components/Badge'
 import { CopyToClipboard } from '../../components/CopyToClipboard'
 import { Item } from './Item'
 
@@ -11,6 +12,7 @@ type RouteType = {
   name: string
   description: string
   route: string
+  method: string
   headers: ItemType[]
   params: ItemType[]
   body: ItemType[]
@@ -25,7 +27,10 @@ export function Route({ route }: RouteProps) {
     <>
       <main className="flex-1 flex flex-col p-4 max-w-3xl mx-auto gap-6 md:p-8">
         <div className="flex flex-col gap-2">
-          {route.name && <h1 className="text-xl font-medium">{route.name}</h1>}
+          <div className="flex items-center gap-2">
+            <h1 className="text-xl font-medium">{route.name}</h1>
+            <Badge method={route.method} />
+          </div>
 
           {route.description && (
             <span className="text-sm text-zinc-500">{route.description}</span>
