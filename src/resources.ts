@@ -1,10 +1,10 @@
 export const resources = [
   {
     name: 'Applications',
-    description: 'Get specific application',
     routes: [
       {
         name: 'Get application',
+        description: 'Get specific application',
         route: '/applications/:id',
         method: 'get',
         headers: [
@@ -25,6 +25,7 @@ export const resources = [
       },
       {
         name: 'Fetch applications',
+        description: '',
         route: '/applications',
         method: 'get',
         headers: [
@@ -39,6 +40,7 @@ export const resources = [
       },
       {
         name: 'Create application',
+        description: '',
         route: '/applications',
         method: 'post',
         headers: [
@@ -69,6 +71,7 @@ export const resources = [
       },
       {
         name: 'Update application',
+        description: '',
         route: '/applications/:id',
         method: 'put',
         headers: [
@@ -105,6 +108,7 @@ export const resources = [
       },
       {
         name: 'Delete application',
+        description: '',
         route: '/applications/:id',
         method: 'delete',
         headers: [

@@ -27,7 +27,9 @@ export function Route({ route }: RouteProps) {
         <div className="flex flex-col gap-2">
           {route.name && <h1 className="text-xl font-medium">{route.name}</h1>}
 
-          {route.description && <span>{route.description}</span>}
+          {route.description && (
+            <span className="text-sm text-zinc-500">{route.description}</span>
+          )}
         </div>
 
         {route.route && (
