@@ -23,7 +23,7 @@ interface RouteProps {
 export function Route({ route }: RouteProps) {
   return (
     <>
-      <main className="flex-1 flex flex-col px-4 py-8 max-w-3xl mx-auto gap-8">
+      <main className="flex-1 flex flex-col p-8 max-w-3xl mx-auto gap-8">
         <div className="flex flex-col gap-2">
           {route.name && <h1 className="text-xl font-medium">{route.name}</h1>}
 
