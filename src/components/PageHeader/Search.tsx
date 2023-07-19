@@ -40,7 +40,7 @@ export function Search() {
         open={open}
         onOpenChange={setOpen}
         label="Global Command Menu"
-        className="fixed top-0 left-0 bottom-0 right-0"
+        className="fixed top-0 left-0 bottom-0 right-0 z-50"
       >
         <div
           className="fixed top-0 left-0 bottom-0 right-0 bg-black/50"
@@ -103,23 +103,21 @@ export function Search() {
         </div>
       </Command.Dialog>
 
-      <div className="hidden md:flex">
-        <button
-          type="button"
-          className="flex gap-4 items-center h-10 pl-4 pr-2 rounded-lg border border-zinc-100 text-zinc-400 hover:bg-zinc-100 transition-colors w-[440px] justify-between"
-          onClick={() => setOpen(true)}
-        >
-          <div className="flex items-center gap-2">
-            <MagnifyingGlass />
+      <button
+        type="button"
+        className="w-full flex gap-4 items-center h-10 pl-4 pr-2 rounded-lg border border-zinc-100 text-zinc-400 hover:bg-zinc-100 transition-colors justify-between"
+        onClick={() => setOpen(true)}
+      >
+        <div className="flex items-center gap-2">
+          <MagnifyingGlass />
 
-            <span className="text-sm">Quick search for anything </span>
-          </div>
+          <span className="text-sm">Quick search for anything</span>
+        </div>
 
-          <span className="text-xs border border-zinc-200 py-1 px-2 rounded-md leading-none">
-            {platform === 'macOS' ? '⌘' : 'Ctrl'} K
-          </span>
-        </button>
-      </div>
+        <span className="text-xs border border-zinc-200 py-1 px-2 rounded-md leading-none">
+          {platform === 'macOS' ? '⌘' : 'Ctrl'} K
+        </span>
+      </button>
     </>
   )
 }

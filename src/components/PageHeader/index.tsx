@@ -14,6 +14,10 @@ export function PageHeader() {
     <>
       {open && (
         <div className="fixed top-16 right-0 bottom-0 left-0 p-4 flex flex-col bg-white z-10 lg:hidden">
+          <div className="flex pb-4">
+            <Search />
+          </div>
+
           {resources.map((resource) => (
             <div key={resource.name} className="flex flex-col gap-2">
               <span className="text-base font-medium">{resource.name}</span>
@@ -48,7 +52,9 @@ export function PageHeader() {
           Orbit
         </Link>
 
-        <Search />
+        <div className="hidden max-w-md w-full md:flex">
+          <Search />
+        </div>
 
         <button
           className="h-16 w-16 flex items-center justify-center xl:flex"
