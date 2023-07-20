@@ -24,7 +24,7 @@ interface RouteProps {
 
 export function Route({ route }: RouteProps) {
   return (
-    <>
+    <div className="flex-1 flex overflow-auto">
       <main className="flex-1 flex flex-col p-4 max-w-3xl mx-auto gap-6 md:p-8">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
@@ -87,6 +87,6 @@ export function Route({ route }: RouteProps) {
       </main>
 
       <div className="hidden w-64 xl:block" />
-    </>
+    </div>
   )
 }

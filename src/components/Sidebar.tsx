@@ -5,7 +5,7 @@ import { Badge } from './Badge'
 
 export function Sidebar() {
   return (
-    <div className="flex-col p-4 w-64 gap-6 border-r border-zinc-200 hidden xl:flex">
+    <div className="flex-col p-4 w-64 gap-6 border-r border-zinc-200 hidden overflow-auto xl:flex">
       {resources.map((resource) => (
         <div key={resource.name} className="flex flex-col gap-2">
           <span className="text-sm font-medium">{resource.name}</span>
